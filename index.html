@@ -1,0 +1,25 @@
+<html>
+    <head> </head>
+    <body>
+        <script>
+
+            async function primero() {
+                const consulta = await fetch("https://raw.githubusercontent.com/profesorfaco/dno037-2023/main/clase-06/datos.json");
+                const data = await consulta.json();
+                console.log(data);
+                var region = [0]
+                var hombre = [0];
+                var mujer = [0s];
+                
+                data.forEach((d)=>{
+                hombre = hombre + d.hombres;
+                    mujer = mujer + d.mujeres;
+                });
+                
+                console.log("Total de hombres:" + hombre);
+                console.log("Total de mujeres:" + mujer);
+            }
+            primero().catch((error) => console.error(error));
+        </script>
+    </body>
+</html>
